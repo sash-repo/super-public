@@ -27,5 +27,6 @@ License: MIT (see `LICENSE`).
 | [`domvera/`](domvera/) | D. Leites, *Dominant weights, systems of simple roots, and reflections* (in preparation) | `domvera-v1` |
 | [`arc/`](arc/) | D. Leites, I. Shchepochkina, *Superized Schwarzians and linear fractional transformations of distinguished superstrings* (in preparation) | `arc-v1` |
 | [`sposci/`](sposci/) | D. Leites, I. Shchepochkina, *Spinor-oscillator representations of stringy Lie superalgebras* (in preparation) | `sposci-v1` |
+| [`shdet/`](shdet/) | A. Lebedev, D. Leites, *The Shapovalov determinant for stringy Lie superalgebras* (in preparation) | `shdet-v1` |
 
 Cite a folder by its link, e.g. `https://github.com/sash-repo/super-public/tree/main/borcmod`.
