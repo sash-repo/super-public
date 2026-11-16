@@ -30,5 +30,6 @@ License: MIT (see `LICENSE`).
 | [`shdet/`](shdet/) | A. Lebedev, D. Leites, *The Shapovalov determinant for stringy Lie superalgebras* (in preparation) | `shdet-v1` |
 | [`gkf/`](gkf/) | D. Leites, O. Lozhechnyk, *The Gelfand--Kalinin--Fuchs problem in a finite-dimensional model* (in preparation) | `gkf-v1` |
 | [`indecomp/`](indecomp/) | A. Krutov, D. Leites, *Supervarieties of indecomposable modules over Lie superalgebras and Grassmann superalgebras* (in preparation) | `indecomp-v1` |
+| [`realvera/`](realvera/) | D. Leites, *Automorphisms and real forms of simple Lie superalgebras (after V. Serganova)* (in preparation) | `realvera-v1` |
 
 Cite a folder by its link, e.g. `https://github.com/sash-repo/super-public/tree/main/borcmod`.
