@@ -24,5 +24,6 @@ License: MIT (see `LICENSE`).
 | [`sandall/`](sandall/) | P. Grozman, A. Krutov, D. Leites, O. Lozhechnyk, *Sandwiches, filtered deformations and normal shapes in modular Lie (super)algebras* (in preparation) | `sandall-v1` |
 | [`shclumn/`](shclumn/) | D. Leites, I. Shchepochkina, *The classification of simple complex Lie superalgebras of polynomial vector fields and their deformations* (survey, in preparation) | `shclumn-v1` |
 | [`svodd/`](svodd/) | D. Leites, O. Lozhechnyk, *Simple singularities of functions on supermanifolds with odd parameters* (in preparation) | `svodd-v1` |
+| [`domvera/`](domvera/) | D. Leites, *Dominant weights, systems of simple roots, and reflections* (in preparation) | `domvera-v1` |
 
 Cite a folder by its link, e.g. `https://github.com/sash-repo/super-public/tree/main/borcmod`.
