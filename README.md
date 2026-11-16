@@ -25,5 +25,6 @@ License: MIT (see `LICENSE`).
 | [`shclumn/`](shclumn/) | D. Leites, I. Shchepochkina, *The classification of simple complex Lie superalgebras of polynomial vector fields and their deformations* (survey, in preparation) | `shclumn-v1` |
 | [`svodd/`](svodd/) | D. Leites, O. Lozhechnyk, *Simple singularities of functions on supermanifolds with odd parameters* (in preparation) | `svodd-v1` |
 | [`domvera/`](domvera/) | D. Leites, *Dominant weights, systems of simple roots, and reflections* (in preparation) | `domvera-v1` |
+| [`sposci/`](sposci/) | D. Leites, I. Shchepochkina, *Spinor-oscillator representations of stringy Lie superalgebras* (in preparation) | `sposci-v1` |
 
 Cite a folder by its link, e.g. `https://github.com/sash-repo/super-public/tree/main/borcmod`.
