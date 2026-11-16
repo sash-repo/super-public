@@ -1,0 +1,15 @@
+# order <= 3;  entry = dim Hom for the shift s = 0,1,2,...,6
+# generic reference pair (Fraction(1, 31), Fraction(5, 31))
+   mu1    mu2   dims per shift s=0..6
+   gen    gen   [1, 1, 1, 1, 1, 1, 1]
+    -2     -2   [1, 1, 1, 1, 1, 2, 2]   <-- differs
+    -2     -1   [1, 1, 1, 1, 1, 2, 2]   <-- differs
+    -2      0   [1, 1, 1, 1, 1, 2, 1]   <-- differs
+    -1     -2   [1, 1, 1, 1, 1, 2, 2]   <-- differs
+    -1     -1   [1, 1, 1, 2, 2, 2, 1]   <-- differs
+    -1      0   [1, 1, 1, 2, 1, 1, 1]   <-- differs
+     0     -2   [1, 1, 1, 1, 1, 2, 1]   <-- differs
+     0     -1   [1, 1, 1, 2, 1, 1, 1]   <-- differs
+     0      0   [1, 2, 1, 1, 1, 1, 1]   <-- differs
+
+# weight pairs differing from the generic answer: 9 of 169

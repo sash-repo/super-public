@@ -1,0 +1,40 @@
+# order <= 4;  entry = dim Hom for the shift s = 0,1,2,...,8
+# generic reference pair (Fraction(1, 31), Fraction(5, 31));  8 workers
+   mu1    mu2   dims per shift s=0..8
+   gen    gen   [1, 1, 1, 1, 1, 1, 1, 1, 1]
+# (unsorted, as computed) -3 -3 [1, 1, 1, 1, 1, 1, 1, 2, 2]
+# (unsorted, as computed) -3 -1 [1, 1, 1, 1, 1, 1, 1, 2, 2]
+# (unsorted, as computed) -3 0 [1, 1, 1, 1, 1, 1, 1, 2, 1]
+# (unsorted, as computed) -3 -2 [1, 1, 1, 1, 1, 1, 1, 2, 2]
+# (unsorted, as computed) -2 -3 [1, 1, 1, 1, 1, 1, 1, 2, 2]
+# (unsorted, as computed) -2 -2 [1, 1, 1, 1, 1, 2, 2, 2, 2]
+# (unsorted, as computed) -2 -1 [1, 1, 1, 1, 1, 2, 2, 2, 1]
+# (unsorted, as computed) -2 0 [1, 1, 1, 1, 1, 2, 1, 1, 1]
+# (unsorted, as computed) -1 -3 [1, 1, 1, 1, 1, 1, 1, 2, 2]
+# (unsorted, as computed) -1 -2 [1, 1, 1, 1, 1, 2, 2, 2, 1]
+# (unsorted, as computed) -1 -1 [1, 1, 1, 2, 2, 2, 1, 1, 1]
+# (unsorted, as computed) -1 0 [1, 1, 1, 2, 1, 1, 1, 1, 1]
+# (unsorted, as computed) 0 -3 [1, 1, 1, 1, 1, 1, 1, 2, 1]
+# (unsorted, as computed) 0 -2 [1, 1, 1, 1, 1, 2, 1, 1, 1]
+# (unsorted, as computed) 0 -1 [1, 1, 1, 2, 1, 1, 1, 1, 1]
+# (unsorted, as computed) 0 0 [1, 2, 1, 1, 1, 1, 1, 1, 1]
+
+    -3     -3   [1, 1, 1, 1, 1, 1, 1, 2, 2]   <-- differs
+    -3     -2   [1, 1, 1, 1, 1, 1, 1, 2, 2]   <-- differs
+    -3     -1   [1, 1, 1, 1, 1, 1, 1, 2, 2]   <-- differs
+    -3      0   [1, 1, 1, 1, 1, 1, 1, 2, 1]   <-- differs
+    -2     -3   [1, 1, 1, 1, 1, 1, 1, 2, 2]   <-- differs
+    -2     -2   [1, 1, 1, 1, 1, 2, 2, 2, 2]   <-- differs
+    -2     -1   [1, 1, 1, 1, 1, 2, 2, 2, 1]   <-- differs
+    -2      0   [1, 1, 1, 1, 1, 2, 1, 1, 1]   <-- differs
+    -1     -3   [1, 1, 1, 1, 1, 1, 1, 2, 2]   <-- differs
+    -1     -2   [1, 1, 1, 1, 1, 2, 2, 2, 1]   <-- differs
+    -1     -1   [1, 1, 1, 2, 2, 2, 1, 1, 1]   <-- differs
+    -1      0   [1, 1, 1, 2, 1, 1, 1, 1, 1]   <-- differs
+     0     -3   [1, 1, 1, 1, 1, 1, 1, 2, 1]   <-- differs
+     0     -2   [1, 1, 1, 1, 1, 2, 1, 1, 1]   <-- differs
+     0     -1   [1, 1, 1, 2, 1, 1, 1, 1, 1]   <-- differs
+     0      0   [1, 2, 1, 1, 1, 1, 1, 1, 1]   <-- differs
+
+# weight pairs differing from the generic answer: 16 of 169
+# 508 s
