@@ -9,5 +9,20 @@ License: MIT (see `LICENSE`).
 |---|---|---|
 | [`borcmod/`](borcmod/) | S. Bouarroudj, D. Leites, O. Lozhechnyk, *Unary and binary osp(n\|2)-invariant differential operators on the 1\|n-dimensional contact supermanifold in characteristic >2* (in preparation) | `borcmod-v1` |
 | [`grcsof/`](grcsof/) | S. Bouarroudj, D. Leites, O. Lozhechnyk, I. Shchepochkina, *Gordan-Rankin-Cohen brackets on 1\|n-dimensional superstrings with a contact structure for n<=6* (in preparation) | `grcsof-v1` |
+| [`borvinrel/`](borvinrel/) | P. Grozman, A. Krutov, A. Lebedev, D. Leites, O. Lozhechnyk, *Vinberg's theorem, Borcherds superalgebras, and presentations* (in preparation) | `borvinrel-v1` |
+| [`cssei/`](cssei/) | D. Leites, O. Lozhechnyk, *New simple modular Lie (super)algebras* (in preparation) | `cssei-v1` |
+| [`dpcohom/`](dpcohom/) | D. Leites, O. Lozhechnyk, *Cohomology of Lie (super)algebras in characteristic 2 as a derived functor* (in preparation) | `dpcohom-v1` |
+| [`egorov/`](egorov/) | G. Egorov, D. Leites, *How to superize gl(infinity)* (in preparation; earlier version arXiv:2205.07046) | `egorov-v1` |
+| [`freeslie/`](freeslie/) | D. Leites, O. Lozhechnyk, *Free Lie superalgebras in characteristics 2 and 3, and reflections of roots in characteristic p* (in preparation) | `freeslie-v1` |
+| [`grozall/`](grozall/) | D. Leites, O. Lozhechnyk, *P. Grozman operators on symplectic, periplectic, contact and pericontact (super)manifolds* (in preparation) | `grozall-v1` |
+| [`howe/`](howe/) | D. Leites, O. Lozhechnyk, I. Shchepochkina, *Howe duality on (hyper)Kähler supermanifolds* (in preparation) | `howe-v1` |
+| [`kaehler/`](kaehler/) | D. Leites, *Superization of Kähler and hyper-Kähler manifolds* (in preparation) | `kaehler-v1` |
+| [`lezsav/`](lezsav/) | D. Leites, *Superized Leznov-Saveliev equations are the zero-curvature condition on a reduced connection* (in preparation) | `lezsav-v1` |
+| [`max3exc/`](max3exc/) | D. Leites, O. Lozhechnyk, *Maximal subalgebras in the exceptional simple finite-dimensional Lie superalgebras ag(2), ab(3) and osp_a(4\|2)* (in preparation) | `max3exc-v1` |
+| [`maxvec/`](maxvec/) | D. Leites, I. Shchepochkina, *Maximal graded subalgebras of simple vectorial Lie superalgebras with polynomial coefficients* (in preparation) | `maxvec-v1` |
+| [`popind/`](popind/) | D. Leites, O. Lozhechnyk, *Replacing the positive-definite form with a nondegenerate one in Popov's Discrete complex reflection groups* (in preparation) | `popind-v1` |
+| [`sandall/`](sandall/) | P. Grozman, A. Krutov, D. Leites, O. Lozhechnyk, *Sandwiches, filtered deformations and normal shapes in modular Lie (super)algebras* (in preparation) | `sandall-v1` |
+| [`shclumn/`](shclumn/) | D. Leites, I. Shchepochkina, *The classification of simple complex Lie superalgebras of polynomial vector fields and their deformations* (survey, in preparation) | `shclumn-v1` |
+| [`svodd/`](svodd/) | D. Leites, O. Lozhechnyk, *Simple singularities of functions on supermanifolds with odd parameters* (in preparation) | `svodd-v1` |
 
 Cite a folder by its link, e.g. `https://github.com/sash-repo/super-public/tree/main/borcmod`.

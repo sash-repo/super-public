@@ -1,0 +1,99 @@
+# howe
+
+**Howe duality on (hyper)Kähler supermanifolds**
+
+D. Leites, O. Lozhechnyk, I. Shchepochkina. Status: in preparation.
+
+The scripts check, in exact rational arithmetic (`fractions.Fraction`, and `../lib/exactlin.py`
+for the larger ranks, fast when python-flint is installed and correct without it), the
+computations of the text: the flat models of the symplectic, periplectic, Kähler and
+hyper-Kähler forms and the operators acting on them; the Lie superalgebras le(n), sle(n), m(n),
+b_{a,b}(n), b(n), sb(n) built from generating functions; the irreducible pe(n)-modules (as the
+quotient of the induced module by its maximal submodule, computed weight by weight); the induced
+modules I(V) and their singular vectors (Kochetkov's lists). The one exception is `realver.py`,
+a floating-point (numpy) check of which real form the Lefschetz operators span.
+
+## How to run
+
+```bash
+python3 -m venv venv && venv/bin/pip install -r howe/requirements.txt
+cd howe
+../venv/bin/python howepair.py
+```
+
+Every script is run from inside this folder; the scripts that need it find `../lib/exactlin.py`
+by themselves. Arguments, where there are any, are given in the table. The timings were measured on a laptop
+while it was heavily loaded by other jobs; on an idle machine they are several times shorter.
+
+## Claims of the text and the scripts behind them
+
+Numbers are those of the full (arXiv) version of the text, which carries Appendices A--D; the
+journal version omits the appendices and some Statements, and numbers its items differently.
+
+| Claim in the text | Script and arguments | Expected output |
+|---|---|---|
+| Theorem 3.1.2 (the relations between X^±, H, D^±), Theorem 2.5.1 in the flat model, Statement 3.1.4 (the centralizer of the po(2)-action, dim A = 576, is 10-dimensional for ħ = 1 and ħ = 0) | `run_howe.py` (about 2 min); one model at a time: `howe.py [n] [l] [degree]`, e.g. `howe.py` | `run_howe.py`: on sdim (2\|0) and (4\|0) every relation `True`, `rho(1) = -hbar : True`, and `hbar = 1 : ansatz of 576 operators ; centralizer of dim 10 ; ... => equal: True`, the same line for `hbar = 0`; `howe.py`: `OK` on every line of (1)-(5). In part (6) of `howe.py` the entries `[X+,delta] = d` for l ≥ 1 are `False`: the engine's X^± are those of the even form only and are not the operators of the text when l ≥ 1; the contraction itself, `[d,d]`, `[delta,delta]`, `[d,delta]`, is `True` for l = 0,...,3 |
+| Lemmas 4.1.3, 4.1.5, 4.1.11 and Statement 4.1.7 (the Fischer decomposition fails for M = 0: in degree 2, sdim P_2 = (4\|4), H_2 = (3\|4), R²P_0 = (1\|0)) | `howepair.py` | `deg 2: dim P_k = 8, dim H_k = 7, dim R^2 P_{k-2} = 1 : NOT direct: meet 1-dim, span 7 < 8`, `Delta(R^2) = 0: True;  Delta(R^4) = 0: False`, last line `ALL CHECKS PASSED: True` |
+| Lemma 4.2.1 (what the multiplication by the connection form commutes with) | `run_howe.py` | `n = 1 : 11 contact fields ; the multiplier is df/dt in every one of them (mismatches: 0)`, the same for n = 2 (27 fields), `=> alpha^ commutes with po(2n) = {f | df/dt = 0} and with no other contact field.` |
+| Theorem 4.3.1 (the odd square root: relations (26) for every n) | `oddsq.py 5` (about 2 min) | `=> n = k: all 18 checks pass` for k = 1,...,5, `closure sdim by n: n=1: (8|8), ..., n=5: (8|8)`, `90 checks, 90 pass` |
+| Propositions 5.1.1 and 5.2.1 (the fiber algebras: aut(ω) = osp(m\|2n) for ω even, pe/spe for ω odd) | `fibersym.py` | 15 cases `aut(omega_ev) = osp(m|2n)`, the hyper-Kähler columns, `all assertions passed` |
+| Claim 5.3.1 (which real form of o(5) the Lefschetz operators span) | `realver.py` (floating point, numpy) | `hyperKahler (8,0): (10, 4, 6)` and `pseudo-hyperKahler (4,4): (10, 4, 6)` (o(4,1)), `hypersymplectic: (10, 6, 4)` (sp(4;R)): dimension and the signature of the Killing form |
+| Proposition 6.1.2 (which Borel: the two lists for n = 2) and Theorem A.2.1 for n = 2 (exhaustive for dominant λ in [-3,3]², degrees 1-3) | `scan.py 2 3 -3 3 6` (the Borel with Λ² up) and `scan.py 2 3 -3 3 6 S2` (with S² up, Kochetkov's) | Λ²-up: singular vectors at λ = (0,0), (1,-3), (1,-2), (1,-1), (1,0) (two), (1,1), (3,2); S²-up: at λ = (0,-3), ..., (0,0), (1,1) (two), (2,1) (two), (3,1), the last one with coefficient `2 (t1)` = a-1 |
+| Theorem A.2.1 and Theorem 9.2.1 for n = 4 (every family at its own weight) | `targeted.py 4` (about 7 min) | `1 singular vector(s)` on each of the lines `1a k=2,3,4`, `1b a=2,3,4`, `1c c=0,1,2`, `2` |
+| Theorem A.2.1 for n = 5 (families 1b), 1c), 2)) | `n5cheap.py` (about 4 min) | `1 singular vector(s)` on every line |
+| Theorem A.2.1 for n = 5, family 1a) | `targeted.py 5` (over an hour, not rerun here) | `1 singular vector(s)` on each line `1a k=2,...,5` |
+| Theorem A.2.1 for n = 3 (the box scan, covered in part) | `scan.py 3 3 -2 3 6 S2` (hours; not rerun here) | the lines `lambda=(0,0,-2)`, `(0,0,-1)`, `(0,0,0)` in degree 1 and `lambda=(1,1,1)` in degree 2 |
+| Lemma 9.3.2 (Ker S in degree 3 is generated by one vector over n_+) | `l1gen.py` (n = 6 takes about an hour) | `n = 2 : ... GENERATES L_1`; for n = 3,...,6 `does NOT generate`, the lowest vector generating 32, 80, 160, 280 of dim L_1 = 38, 88, 170, 292 |
+| Proposition 9.3.3 (the two generators X_0, Y_0) | `l1gen2.py` (n = 6 takes about an hour); `reduce_test.py 2 3 -3 3`, `reduce_test.py 3 2 -1 2` (the second about 30 min) | `minimal # of generators = 1` for n = 2 and `2` for n = 3,...,6, `<X_0,Y_0> generates all of L_1`; `reduce_test.py`: `n = 2: 1363 weight spaces compared, 0 mismatches`, `n = 3: 1720 weight spaces compared, 0 mismatches` |
+| Corollary 9.3.4 (the two equations written out) | `twoeq.py` | the brackets `[X_0, t_i]`, `[Y_0, d_i]`, ... for n = 2,...,6 |
+| Ker S is an L_0-submodule of L_1 (Subsec. 9.3) | `deltacheck.py` | `0 mismatches` for n = 2,...,5 |
+| Theorem 9.3.7 and Theorem A.2.1, families 1a) and 1c) | `wcheck.py` (about 3 min), `fam1c.py` | `wcheck.py`: `k/k identities hold` on every line, n ≤ 5; `fam1c.py`: `lambda_{n-1} = 0,   b_{n-2,n-1}.m_1 = 0` on every line |
+| Proposition A.4.2 (for n = 3 and V of weight (1,1,1), I_2(V) is reducible; dim (Z_1)_2, (Z_1)_3, (Z_1)_4 = 1, 6, 17) | `layer2.py` (n = 2, 3 in seconds; it goes on to n = 4, which takes over an hour and is not needed for the claim) | for n = 3: `dim Z_1 by degree: {2: 1, 3: 6, 4: 17, 5: 31}`, `z in Z_1 : False`, `=> I_2(V) = I(V)/Z_1 REDUCIBLE : True` (n = 2: `False`) |
+| Subsec. D.1: the module axiom on V(λ) and on I(V), 412 800 triples | `check.py` (about 7 min) | `OK` on every line; `I(V(1, 1)) n=2 : ... 5200 triples`, `I(V(2, 1)) n=2 : ... 10400`, `I(V(2, 2)) n=2 : ... 5200`, `I(V(1, 1, 1)) n=3 : ... 78400`, `I(V(2, 1, 1)) n=3 : ... 235200`, `I(V(2, 2, 2)) n=3 : ... 78400` |
+| Lemma B.1.4 (L_1 generates L_{≥1} of sle(n) except Le_{ξ_1...ξ_n} in L_{n-2}; 2 ≤ n ≤ 6, degrees ≤ 4) | `gencheck.py 6 4` (about 9 min) | `missing 1` exactly on `n=4 L_2`, `n=5 L_3`, `n=6 L_4`, `missing 0` elsewhere; dim L_j for n = 4: 80, 161, 280, 448 |
+| Subsec. D.1: dim Ker S in degree 3 is 8, 32, 80, 160 for n = 2,...,5; the self-test of sle(n) | `sle.py` | `n=5  [L_1,L_2] spans 841 of dim L_3 = 842 -> NOT GENERATING`, `(one dimension short in L_{n-2}: the field D_{xi_1...xi_n}, as expected)`, `selftest: OK` |
+| Theorem 9.4.1, Theorem B.1.7, Lemma B.2.1 (item 2c): the two weights interchanged), n = 3 | `kocheck.py 3` (about 2 min) | `1 singular vector(s)` on every family line, and `2c printed ... : 0 singular vector(s)` against `2c swapped ... : 1 singular vector(s)` |
+| Theorem B.1.7, the lines for n = 4 | `kocheck2.py 4`, `kocheck3.py 4` (each over an hour; not rerun to the end here) | `1 singular vector(s)` on each line (the first lines, `1c lam=0`, `2a`, `2b`, were rerun) |
+| Lemma B.2.4 and Remark B.2.5 (the box scan over sle(2) and sle(3)) | `slescan.py 2 5 3 10` (about 1 min); `slescan.py 3 3 1 8` (a reduced box; the full `slescan.py 3 5 2 8` takes hours and is covered only in part) | for n = 2 the vectors of the extra family at a = 1, 2, 3; for n = 3 the lines at `a=(0, 0)`, `a=(0, 1)`, `a=(1, 0)` |
+| Proposition 9.3.3 for sle(n) (the reduction to X_0) | `slereduce.py 3 3 2` (about 30 min); reduced: `slereduce.py 3 2 1` | `TOTAL 1934 weight spaces, 0 mismatches`; reduced: `0 mismatches` on every line |
+| Theorem 9.4.3 and Proposition 9.4.4 (the sle(n)-list is the six words in d and δ; div Le_f = 2(-1)^{p(f)} S f, S² = 0) | `slecomp.py` | `984 generating functions, div D_f = 2(-1)^p(f) S f in every one`, and for n = 3,...,8 `the words of order >= 2 are exactly the six families 2a), 2b), 2c), 3a), 3b), 4) -- 6 of them, and no more.` |
+| Lemma 9.7.1 and Conjecture 9.7.2 (b(n), sb(n): the singular vectors are those of le(n), sle(n) plus D times those of degree m-2) | `sb.py` (about 2 min) | `D central in b(n): True ; in sb(n): True ; in m(n): False`, and `dim S(m,nu) = dim S_quot(m,nu) + dim S_quot(m-2,nu): OK` on every line |
+| Theorem 7.1.5 and Lemma 7.1.6 (the graph of Ω as a pe(n)-module: homology one-dimensional in degree n, the three subquotients irreducible) | `omrun.py 4 6`; `omirr.py` (n ≤ 3, i ≤ 6) and `omirr.py 4 5` (about 5 min); `omhom.py` | `omrun.py`: `homology of dimension 1 in degree n`; `omirr.py`: `irred` on every subquotient, `composition factors per degree: {0: 1, 1: 1, 2: 2, 3: 3, 4: 2, 5: 2, 6: 2}` for n = 3 and `{0: 1, 1: 1, 2: 2, 3: 2, 4: 3, 5: 2}` for n = 4 |
+| Lemma 7.2.4, Theorem 7.2.5 (no bivector is le(n)- or sle(n)-invariant), Theorem 7.2.7 (E is diagonal, (n-\|A\|+\|B\|)) | `slrun.py`, `slrun.py 3` (about 3 min); `slbivec.py` (about 20 min); for n = 4, i ≤ 7 (Theorem 7.2.7): `../venv/bin/python -c "import slbivec; slbivec.structure(4, 7)"` (seconds; the full `slbivec.py 4 7` also computes the invariant bivectors for n = 4, which is not claimed and takes more than an hour); `cmp_engines.py` (the two engines agree) | `slrun.py`: `(S1)`-`(S6) ... OK`, `Y_- invariant under all of le(n)  :  no`; `slbivec.py`: `invariant under gl(n) : dim = 1`, `invariant under pe(n) = le(n)_0 : dim = 0`, the same `0` for sle(n) and le(n), `E is diagonal with E('x^A 'xi^B) = (n - |A| + |B|) . 'x^A 'xi^B : True` (for n = 2, 3 and, from `structure(4, 7)`, n = 4, with dim Ker E = 1 in degree 4 only); `cmp_engines.py`: `differs on 0` on every line |
+| Theorem 7.3.4 (no pe(n)-invariant operator lowers the degree of a form, n ≤ 3); Lemmas 7.3.1, 7.3.2, Theorem 7.3.3 | `invhom.py`, `periprim.py` | `10/10 checks passed`; `43/43 checks passed` |
+| Statement 8.2.1 (the six X_a^± span sp(4); the dimensions of the two- and three-kernel spaces for m = 1, 2), Lemma 8.3.1, Corollary 8.3.2 | `hk.py 2` (parts [A], [B] for m = 1 and m = 2 take minutes; it goes on to parts [C], [D], the algebra generated by D_1^±, D_2^±, which `hk2.py` computes faster and which took more than an hour here, so was stopped) | `dim <X_a^+, X_a^- : a=1,2,3>_Lie = 10`, `[X_a^+, X_a^-] = deg - 2m ... True`, and the rows `two` = 1 4 4 0 0 / 1 8 26 40 25 0 0 0 0 and `three` = 1 4 3 0 0 / 1 8 25 32 14 0 0 0 0 |
+| Statement 8.3.3 (D_1^±, D_2^± generate sdim (8\|8), two ideals; with D_3^±, (16\|16), simple, containing X_3^-) | `hk2.py 1` (about 25 min) | `{D_a^+, D_a^-: a=1,2} : sdim (8|8), Killing rank 16 (nondegenerate)   X_3^- inside: False`, `even part: dim 8, derived 6, center 2`; `{D_a^+, D_a^-: a=1,2,3} : sdim (16|16), Killing rank 32 ... X_3^- inside: True`, `even part: dim 16, derived 16, center 0`, for ħ = (1,2,3) and (1,1,1) |
+| Proposition 8.3.4 (items 2) and 3)) | `kerhk.py 2 3` (m = 2; forms whose coefficients have degree ≤ 1; about 3 min), `kerhk.py` (m = 1, coefficients of degree ≤ 2) | m = 2: `i= 2: ... ker D_1^-(^)D_2^- =    40 (killed by X_3^- too:     9)`, `i= 3: ... 25 (killed by X_3^- too:     3)`, `twisted inclusion holds in every degree: False`; m = 1: `ker D_1^-(^)D_2^- = 0` for i ≥ 2, `twisted inclusion holds in every degree: True`, and in the last block (one connection) `ker D_1^-` = 15, 25, 5, 0, 0 for i = 0,...,4 |
+| Remark 9.5.2 (the singular vectors over m(n) read as invariant operators) | `opsm.py` | `opsm: 25 passed, 0 failed` |
+| Subsec. C.1: the Lie superalgebras m(n), M_{a,b}(n) and the module layer; L_1 generates L_{≥1} | `mcheck0.py` (about 15 min), `mcheck1.py`, `mcheck1.py 3`, `mgencheck.py` (about 2 min) | `Jacobi: ... 0 bad`, `div (n z - h) = {}`, `ad z = grading: 0 bad`; the tables `dim M_{a,b}_j`; `generated k of k` on every line except, for n = 2, `M_{2,-2}(n): degree 2: generated 16 of 17   <-- GAP` (a+b = 0, i.e. λ = ∞, where L_1 does not generate L_{≥1}, as stated in Remark C.6.4) |
+| Subsec. C.1: the names of m(n)_{-1} and the constants of eqs. (44) and (84); the condition df/dτ = 0 defines b(n) | `mhat.py`, `mnames.py`, `btau.py` | `True` on every line of `mhat.py`; `158 checks, 0 failed`; `Conclusion: { f in m(n) \| df/dtau = 0 } = C[x,xi] with the antibracket = b(n)` |
+| Proposition C.1.2 (the misprint in the bracket of m(n): four sign patterns survive the Jacobi identity) | `msign.py` (about 1 min) | `4 sign patterns survive` |
+| Proposition C.2.1 (the dictionary b_{a,b}(n) = b_λ(n)) | `blam.py` (n = 3); `blam.py 4 3` | `kappa = (nb+a)/a ... ok` on every line |
+| Theorem C.5.1, Lemma C.3.1, Statement C.3.2 (the list over m(n); family 1a) has no member k = 1; 1b) needs λ ≠ 0 unless k = n) | `mkoT1.py 3`; `mscan.py 2 3 0 2 -1 3` (a box scan over m(2)) | `1a) ... : 0 singular vector(s) (k=1)`, `1 singular vector(s)` for k = 2, 3; `1b) ... : 0 singular vector(s)` at `lambda=0` for k < n and `1` otherwise |
+| Theorem C.5.2, Statement C.4.1, Proposition C.4.2, Lemmas C.4.3, C.4.4, Statement C.4.5 | `mkoT2.py 2`, `mkoT2.py 3` (about 1 min) | for every item the space of singular vectors at the printed weight, `(no singular vector at the claimed weight)` where the item as printed fails (2b) for λ ≠ 1-n, 2c) as printed, 3c) as printed), and the vectors of Statements C.4.1 and C.4.5 |
+| Theorem C.6.1 (the items as functions of λ, 19 values, n = 2, 3) | `mabloci.py 2`, `mabloci.py 3` (about 6 min) | n = 2: 2a), 3a), 3c) at all 19 values, 2b) at λ = 0 and 2, 4) at λ = 1 only; n = 3: 2b) at λ = 0 and 1, 2c) at λ = 2 only, 4) at λ = 2/3 only |
+| Statements C.6.2 and C.6.3 (the degree-one families are λ-independent; D-companions) | `mabsweep2.py 2 3 1 -6 6` (about 6 min) | `V(mu = [0]), degree m = 1, ... : 19 of 19 values of t`; in degree 3, `'d2D (x) m1` at t = 0 (λ = 0) only |
+
+## Files
+
+Engines:
+- `le.py` — le(n) from generating functions, the Buttin bracket, the vector fields Le_f.
+- `pemod.py` — the irreducible pe(n)-modules V(λ), weight space by weight space.
+- `imod.py` — the induced le(n)-modules I(V) and the search for singular vectors.
+- `sle.py` — sle(n) = {Le_f | S f = 0}; run alone, the dimensions of Ker S and its self-test.
+- `mn.py`, `mimod.py`, `mab.py` — m(n) and M_{a,b}(n) = b_{a,b}(n), their induced modules.
+- `howe.py` — the flat models of Section 2 and their operators.
+- `hk.py` — the hyper-Kähler flat model (X_a^±, D_a^±).
+- `omcheck.py`, `slcheck.py`, `periprim.py` — forms with constant, resp. polynomial,
+  coefficients over a periplectic supermanifold.
+- `report.py`, `mreport.py` — print singular vectors in the notation of the text.
+- `scan.py`, `slescan.py`, `mone.py`, `mscan.py` — scans over a box of highest weights.
+
+Drivers and checks: `run_howe.py`, `howepair.py`, `oddsq.py`, `fibersym.py`, `realver.py`,
+`targeted.py`, `n5cheap.py`, `l1gen.py`, `l1gen2.py`, `reduce_test.py`, `twoeq.py`,
+`deltacheck.py`, `wcheck.py`, `fam1c.py`, `layer2.py`, `check.py`, `gencheck.py`,
+`kocheck.py`, `kocheck2.py`, `kocheck3.py`, `slereduce.py`, `slecomp.py`, `sb.py`,
+`omrun.py`, `omirr.py`, `omhom.py`, `slrun.py`, `slbivec.py`, `cmp_engines.py`, `invhom.py`,
+`hk2.py`, `kerhk.py`, `opsm.py`, `mcheck0.py`, `mcheck1.py`, `mgencheck.py`, `mhat.py`,
+`mnames.py`, `btau.py`, `msign.py`, `blam.py`, `mkoT1.py`, `mkoT2.py`, `mabloci.py`,
+`mabsweep2.py` (one per row of the table above).
