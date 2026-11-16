@@ -26,6 +26,7 @@ License: MIT (see `LICENSE`).
 | [`svodd/`](svodd/) | D. Leites, O. Lozhechnyk, *Simple singularities of functions on supermanifolds with odd parameters* (in preparation) | `svodd-v1` |
 | [`domvera/`](domvera/) | D. Leites, *Dominant weights, systems of simple roots, and reflections* (in preparation) | `domvera-v1` |
 | [`arc/`](arc/) | D. Leites, I. Shchepochkina, *Superized Schwarzians and linear fractional transformations of distinguished superstrings* (in preparation) | `arc-v1` |
+| [`stringdef/`](stringdef/) | D. Leites, O. Lozhechnyk, *Deformations of the distinguished stringy Lie superalgebras: what the coefficients decide* (in preparation) | `stringdef-v1` |
 | [`sposci/`](sposci/) | D. Leites, I. Shchepochkina, *Spinor-oscillator representations of stringy Lie superalgebras* (in preparation) | `sposci-v1` |
 | [`shdet/`](shdet/) | A. Lebedev, D. Leites, *The Shapovalov determinant for stringy Lie superalgebras* (in preparation) | `shdet-v1` |
 | [`gkf/`](gkf/) | D. Leites, O. Lozhechnyk, *The Gelfand--Kalinin--Fuchs problem in a finite-dimensional model* (in preparation) | `gkf-v1` |
