@@ -32,6 +32,7 @@ License: MIT (see `LICENSE`).
 | [`dspo/`](dspo/) | D. Leites, O. Lozhechnyk, *The Duflo--Serganova homology for the Poisson and queer versions of the general linear Lie algebra* (in preparation) | `dspo-v1` |
 | [`wk/`](wk/) | D. Leites, O. Lozhechnyk, *On maximal dimension of the irreps over simple Lie (super)algebras in characteristic 2* (in preparation) | `wk-v1` |
 | [`cartprol/`](cartprol/) | A. Krutov, D. Leites, O. Lozhechnyk, *Cartan prolongs of small irreducible modules over exceptional modular Lie (super)algebras* (in preparation) | `cartprol-v1` |
+| [`invcm/`](invcm/) | D. Leites, O. Lozhechnyk, *Inverses of Cartan matrices of Lie algebras and Lie superalgebras*, Linear Algebra Appl. 583 (2019), revised version | `invcm-v1` |
 | [`arc/`](arc/) | D. Leites, I. Shchepochkina, *Superized Schwarzians and linear fractional transformations of distinguished superstrings* (in preparation) | `arc-v1` |
 | [`stringdef/`](stringdef/) | D. Leites, O. Lozhechnyk, *Deformations of the distinguished stringy Lie superalgebras: what the coefficients decide* (in preparation) | `stringdef-v1` |
 | [`sposci/`](sposci/) | D. Leites, I. Shchepochkina, *Spinor-oscillator representations of stringy Lie superalgebras* (in preparation) | `sposci-v1` |
