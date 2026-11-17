@@ -42,5 +42,6 @@ License: MIT (see `LICENSE`).
 | [`indecops/`](indecops/) | D. Leites, O. Lozhechnyk, *Which invariant differential operators on the line are indecomposable* (in preparation) | `indecops-v1` |
 | [`ivan/`](ivan/) | D. Leites, *Simple Lie superalgebras of anti-symmetric elements in associative superalgebras* (in preparation) | `ivan-v1` |
 | [`sugragl/`](sugragl/) | P. Grozman, D. Leites, *From Supergravity to Ballbearings* (in preparation) | `sugragl-v1` |
+| [`inst/`](inst/) | D. Leites, *On superinstantons* (in preparation) | `inst-v1` |
 
 Cite a folder by its link, e.g. `https://github.com/sash-repo/super-public/tree/main/borcmod`.
