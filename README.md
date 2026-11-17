@@ -28,6 +28,7 @@ License: MIT (see `LICENSE`).
 | [`index/`](index/) | D. Leites, *The Index Theorem for Homogeneous Differential Operators on Supermanifolds, and Chern Classes* (in preparation) | `index-v1` |
 | [`igo/`](igo/) | D. Leites, I. Shchepochkina, *Homogeneous supermanifolds whose base is a Hermitian symmetric space* (in preparation) | `igo-v1` |
 | [`dsmode/`](dsmode/) | A. Krutov, D. Leites, J. Shang, *Duflo--Serganova homology for exceptional modular Lie superalgebras with Cartan matrix* (in preparation) | `dsmode-v1` |
+| [`stl/`](stl/) | D. Leites, I. Shchepochkina, *SUSY between Schrödinger and KdV operators* (in preparation) | `stl-v1` |
 | [`arc/`](arc/) | D. Leites, I. Shchepochkina, *Superized Schwarzians and linear fractional transformations of distinguished superstrings* (in preparation) | `arc-v1` |
 | [`stringdef/`](stringdef/) | D. Leites, O. Lozhechnyk, *Deformations of the distinguished stringy Lie superalgebras: what the coefficients decide* (in preparation) | `stringdef-v1` |
 | [`sposci/`](sposci/) | D. Leites, I. Shchepochkina, *Spinor-oscillator representations of stringy Lie superalgebras* (in preparation) | `sposci-v1` |
