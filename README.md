@@ -51,5 +51,6 @@ License: MIT (see `LICENSE`).
 | [`gzimaging/`](gzimaging/) | H. Andersén, V. Grozman, D. Leites, O. Lozhechnyk, *P. Grozman's operator and the shape of a growing nodule* (in preparation) | `gzimaging-v1` |
 | [`dzhubrack/`](dzhubrack/) | D. Leites, O. Lozhechnyk, *The superalgebra of antisymmetrizors, the periplectic case, and what the exponents really govern* (in preparation) | `dzhubrack-v1` |
 | [`oddcp1/`](oddcp1/) | D. Leites, O. Lozhechnyk, *Non-split supermanifolds from the complex projective line, and the versal deformations of superstrings* (in preparation) | `oddcp1-v1` |
+| [`dercentextvect/`](dercentextvect/) | P. Grozman, A. Krutov, A. Lebedev, D. Leites, *Derivations and central extensions of simple vectorial Lie (super)algebras* (in preparation) | `dercentextvect-v1` |
 
 Cite a folder by its link, e.g. `https://github.com/sash-repo/super-public/tree/main/borcmod`.
