@@ -46,5 +46,6 @@ License: MIT (see `LICENSE`).
 | [`sugragl/`](sugragl/) | P. Grozman, D. Leites, *From Supergravity to Ballbearings* (in preparation) | `sugragl-v1` |
 | [`inst/`](inst/) | D. Leites, *On superinstantons* (in preparation) | `inst-v1` |
 | [`sandbrackdist/`](sandbrackdist/) | A. Krutov, D. Leites, O. Lozhechnyk, *Explicit brackets and p-structures of divergence-free and Hamiltonian modular Lie algebras* (in preparation) | `sandbrackdist-v1` |
+| [`gzimaging/`](gzimaging/) | H. Andersén, V. Grozman, D. Leites, O. Lozhechnyk, *P. Grozman's operator and the shape of a growing nodule* (in preparation) | `gzimaging-v1` |
 
 Cite a folder by its link, e.g. `https://github.com/sash-repo/super-public/tree/main/borcmod`.
