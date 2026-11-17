@@ -30,6 +30,7 @@ License: MIT (see `LICENSE`).
 | [`dsmode/`](dsmode/) | A. Krutov, D. Leites, J. Shang, *Duflo--Serganova homology for exceptional modular Lie superalgebras with Cartan matrix* (in preparation) | `dsmode-v1` |
 | [`stl/`](stl/) | D. Leites, I. Shchepochkina, *SUSY between Schrödinger and KdV operators* (in preparation) | `stl-v1` |
 | [`dspo/`](dspo/) | D. Leites, O. Lozhechnyk, *The Duflo--Serganova homology for the Poisson and queer versions of the general linear Lie algebra* (in preparation) | `dspo-v1` |
+| [`wk/`](wk/) | D. Leites, O. Lozhechnyk, *On maximal dimension of the irreps over simple Lie (super)algebras in characteristic 2* (in preparation) | `wk-v1` |
 | [`arc/`](arc/) | D. Leites, I. Shchepochkina, *Superized Schwarzians and linear fractional transformations of distinguished superstrings* (in preparation) | `arc-v1` |
 | [`stringdef/`](stringdef/) | D. Leites, O. Lozhechnyk, *Deformations of the distinguished stringy Lie superalgebras: what the coefficients decide* (in preparation) | `stringdef-v1` |
 | [`sposci/`](sposci/) | D. Leites, I. Shchepochkina, *Spinor-oscillator representations of stringy Lie superalgebras* (in preparation) | `sposci-v1` |
