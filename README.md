@@ -36,5 +36,6 @@ License: MIT (see `LICENSE`).
 | [`realvera/`](realvera/) | D. Leites, *Automorphisms and real forms of simple Lie superalgebras (after V. Serganova)* (in preparation) | `realvera-v1` |
 | [`od/`](od/) | D. Leites, *On odd parameters in geometry* (in preparation) | `od-v1` |
 | [`gzmathbio/`](gzmathbio/) | H. Andersén, V. Grozman, D. Leites, O. Lozhechnyk, *The turn of the curvature axis of a growing nodule: a joint descriptor of two registered tomograms* (in preparation) | `gzmathbio-v1` |
+| [`donin/`](donin/) | J. Donin, edited by D. Leites, *Skew diagrams and decomposition into irreducible components of exterior and symmetric powers of the adjoint representation of gl(p|q)* (in preparation) | `donin-v1` |
 
 Cite a folder by its link, e.g. `https://github.com/sash-repo/super-public/tree/main/borcmod`.
