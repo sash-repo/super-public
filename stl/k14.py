@@ -1,7 +1,7 @@
 """k^L(1|4) (and the Moebius k^M(1|4)) in the theta-basis:
 {f,g} = (2-E)(f) d_x g - d_x f (2-E)(g) - (-1)^{p(f)} sum_i d_i f d_i g.
-The functionals (1), (2), (3) of Table (77) on the monomial windows (1) needs the operator
-Delta_IS of Proposition 2.8.10, defined on k^L'(1|4) only).  Used by h2k14.py.
+The functionals (1), (2), (3) of Table (77) on the monomial windows ((1) needs the operator
+Delta_IS of Proposition 2.8.10, defined on k^L'(1|4) only, simplified before it is evaluated).  Used by h2k14.py.
 Run:  python3 k14.py 1   (Jacobi on the window, and the cocycle test of (1), (2), (3) on k^L'(1|4)
 and on k^L(1|4): triples tested, failures, triples where the functional is undefined).
 """
@@ -50,18 +50,43 @@ def deg(f):
 # --------------------------------------------------- the three functionals
 def Dth(i, g):          # D_{theta_i} = theta_i d_x + d_{theta_i}
     return add(mul(mono(0, (i,)), d_t(g)), d_odd(i, g))
-def D1inv(g):
+def theta_ops(S):
+    """D_th1 D_th2 D_th3 D_th4 applied to theta^S, kept as an operator: {(j, T): c} stands for
+    c * theta^T d_x^j (d_x commutes with every theta-operator)."""
+    cur = {(0, tuple(S)): Q(1)}
+    for i in (4, 3, 2, 1):
+        new = {}
+        for (j, T), c in cur.items():
+            if i not in T:                      # theta_i d_x
+                Tn = tuple(sorted(T + (i,)))
+                new[(j + 1, Tn)] = new.get((j + 1, Tn), 0) + (-1) ** sum(t < i for t in T) * c
+            else:                               # d_theta_i
+                Tn = tuple(t for t in T if t != i)
+                new[(j, Tn)] = new.get((j, Tn), 0) + (-1) ** T.index(i) * c
+        cur = {k: v for k, v in new.items() if v}
+    return cur
+def falling(a, k):
+    r = Q(1)
+    for t in range(k): r *= (a - t)
+    return r
+def DIS(g):
+    """Delta_IS = D_1^{-1} D_th1 D_th2 D_th3 D_th4, SIMPLIFIED BEFORE it is evaluated (Sect. 2.8):
+    sum_{j>=1} P_j d_x^{j-1} + P_0 D_1^{-1}.  Undefined (None) only on x^{-1}theta^S with a
+    non-zero P_0-term, i.e. on the monomial x^{-1}theta_1theta_2theta_3theta_4 (Proposition 2.8.10).
+    Evaluating D_th1...D_th4 first and dividing by d_x afterwards loses the constants killed
+    by d_x (a 0 * 1/0), and then (1) is not a cocycle."""
     out = {}
     for (a, S), c in g.items():
-        if a == -1:
-            return None                         # undefined
-        out[(a + 1, S)] = c / (a + 1)
-    return out
+        for (j, T), s in theta_ops(S).items():
+            if j >= 1:
+                co, e = falling(a, j - 1), a - (j - 1)
+            else:
+                if a == -1: return None
+                co, e = Q(1) / (a + 1), a + 1
+            if co: out[(e, T)] = out.get((e, T), 0) + c * s * co
+    return {k: v for k, v in out.items() if v}
 def c1(f, g):
-    h = g
-    for i in (4, 3, 2, 1):                      # D_th1 D_th2 D_th3 D_th4 (g)
-        h = Dth(i, h)
-    h = D1inv(h)
+    h = DIS(g)
     if h is None: return None
     return (-1) ** parity(f) * Res(mul(f, h))
 def c2(f, g):

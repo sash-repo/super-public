@@ -28,7 +28,7 @@ License: MIT (see `LICENSE`).
 | [`index/`](index/) | D. Leites, *The Index Theorem for Homogeneous Differential Operators on Supermanifolds, and Chern Classes* (in preparation) | `index-v1` |
 | [`igo/`](igo/) | D. Leites, I. Shchepochkina, *Homogeneous supermanifolds whose base is a Hermitian symmetric space* (in preparation) | `igo-v1` |
 | [`dsmode/`](dsmode/) | A. Krutov, D. Leites, J. Shang, *Duflo--Serganova homology for exceptional modular Lie superalgebras with Cartan matrix* (in preparation) | `dsmode-v1` |
-| [`stl/`](stl/) | D. Leites, I. Shchepochkina, *SUSY between Schrödinger and KdV operators* (in preparation) | `stl-v1` |
+| [`stl/`](stl/) | D. Leites, I. Shchepochkina, *SUSY between Schrödinger and KdV operators* (in preparation) | `stl-v2` |
 | [`dspo/`](dspo/) | D. Leites, O. Lozhechnyk, *The Duflo--Serganova homology for the Poisson and queer versions of the general linear Lie algebra* (in preparation) | `dspo-v1` |
 | [`wk/`](wk/) | D. Leites, O. Lozhechnyk, *On maximal dimension of the irreps over simple Lie (super)algebras in characteristic 2* (in preparation) | `wk-v1` |
 | [`cartprol/`](cartprol/) | A. Krutov, D. Leites, O. Lozhechnyk, *Cartan prolongs of small irreducible modules over exceptional modular Lie (super)algebras* (in preparation) | `cartprol-v1` |

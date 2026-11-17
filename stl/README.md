@@ -36,8 +36,8 @@ Numbers are those of the text.
 | Statement 2.8.3, Neveu–Schwarz series: identity (75) for L_n = D_1^{3-n} D_theta1 ... D_thetan of formula (70), n <= 3 | `selfadjeq.py` | for n = 0, 1, 2, 3: `121 / 484 / 1936 / 7744 pairs, 6 / 14 / 32 / 70 non-zero values, 0 failures`; `TOTAL failures: 0` |
 | Statement 2.8.3, Ramond series n = 1 (realization (i), the operator K_zeta K_1^2, zeta = x^{1/2} theta, Res^M of (153)) | `selfadj.py M` (about 2 minutes; `selfadj.py` runs both series, about 4-9 minutes) | `--> n=1: M works for m in [2]` (the only power m in -1..4 giving a super anti-symmetric 2-cocycle) |
 | Lemma 5.8 (the sign of H_f, [K_f,K_g] = K_{f,g}, eps = (-1)^n); formula (154): the D_theta, not the K_theta, enter the cocycles (69) | `kdops.py` | `the sign in H_f is FORCED ...`; for n = 1, 2, 3 `... exactly one eps does it: eps = -1 / 1 / -1` and `and it is not a cocycle` (the K-form); `18 checks, 18 pass, 0 fail` |
-| Statement 2.8.11 (central extensions of k^L(1\|4) and k^M(1\|4)): (2), (3) of Table (77) vanish on k^M(1\|4), are independent non-trivial cocycles on k^L(1\|4), dim H^2(k^L(1\|4)) = 2; and dim H^2(k^L'(1\|4)) = 3 | `h2k14.py 3 7` (2 to 5 minutes) | `k^L'(1\|4) {... 'H2(inner)': 3, '(2)': ('cocycle', 'nontrivial'), '(3)': ('cocycle', 'nontrivial') ...}`; `k^L(1\|4) {... 'H2(inner)': 2, ... 'rank of tests mod B (inner)': 2 ...}`; `k^M(1\|4) {... 'tests identically zero on window': [True, True]}` |
-| Table (77), the functionals (1), (2), (3) on k^L'(1\|4) and k^L(1\|4) | `k14.py 1` | `Jacobi failures ... : 0`; `(2)` and `(3)`: 0 failures on both; `(1) on k^L'(1\|4): (triples, failures, undefined) = (11857, 432, 0)` (see the note below the table) |
+| Statement 2.8.11 (central extensions of k^L(1\|4) and k^M(1\|4)): (2), (3) of Table (77) vanish on k^M(1\|4), are independent non-trivial cocycles on k^L(1\|4), dim H^2(k^L(1\|4)) = 2; and dim H^2(k^L'(1\|4)) = 3, spanned by (1), (2), (3) of Table (77) | `h2k14.py 3 7` (2 to 5 minutes) | `k^L'(1\|4) {... 'H2(inner)': 3, '(1)': ('cocycle', 'nontrivial'), '(2)': ('cocycle', 'nontrivial'), '(3)': ('cocycle', 'nontrivial'), 'rank of tests mod B (inner)': 3 ...}`; `k^L(1\|4) {... 'H2(inner)': 2, ... 'rank of tests mod B (inner)': 2 ...}`; `k^M(1\|4) {... 'tests identically zero on window': [True, True]}` |
+| Table (77), the functionals (1), (2), (3) on k^L'(1\|4) and k^L(1\|4) | `k14.py 1` | `Jacobi failures ... : 0`; `(1) on k^L'(1\|4): (triples, failures, undefined) = (11857, 0, 0)` (see the note below the table); `(2)` and `(3)`: 0 failures on both |
 | Proposition 5.10.1 (the cocycles c_n = St_n with values in F_{1-n/2}, n = 0, 1, 2) and the classical Hamiltonian property of the Miura map (n = 0, after Statement 5.10.2) | `nsgrass.py` | six lines `PASS`, among them `n=3: D1D2D3(H) is a 1-cocycle in F_{1/2}` |
 | Statement 5.10.2 (the super Miura map is a Poisson map for n = 1, c = -1/2) | `miura1.py` | `even h diff zero: True`, `odd h diff zero: True` |
 | Statement 5.10.3 (no non-trivial weight-0 1-cocycle of k^L(1\|3) with values in F_{-1/2}; D_theta1 D_theta2 D_theta3 is one with values in F_{1/2}; d/dx : F_{-1/2} -> F_{1/2} is not invariant) | `h1kn.py`; `miura3.py`; `nsgrass.py` | `n=3 lam=-1/2: ... [(0, 0), (3, 3)]` (3 cocycles, all 3 coboundaries), `n=3 lam=1/2: ... [(0, 0), (1, 0)]`; `parity 0 / 1 d intertwines ...: False`, `n=0, d: F_0->F_1: True` |
@@ -55,13 +55,16 @@ Numbers are those of the text.
 | Statement 12.3.2 (dim 3, 6, 12 of the even solutions of St_1 f = zeta_1 f; all in Ker D_1^3) | `eig.py` (part 2) | `dim_Q = 3 ...`, `6 ...`, `12 (deg_x <= 4), 12 (deg_x <= 6), 12 (deg_x <= 8)`; `all 6 solutions lie in ker(d_x^3) = ker(St_1)^2` |
 | Statement 12.9 and Corollary 12.9.2 (D_theta, D_1 anti-self-adjoint, St_1 self-adjoint, L_1 = St_1 D_1 and St_1^2 = D_1^3 anti-self-adjoint) | `eig.py` (part 7) | `sign -1`, `sign -1`, `sign 1`, `sign -1`, `sign -1`; `==== 18/18 checks pass ====` |
 
-**Note on Table (77), row (1).** In the model of `k14.py` (bracket of Lemma 5.8, theta-basis,
-D_theta = theta d_x + d_theta, D_1^{-1} x^a = x^{a+1}/(a+1) applied last as in Proposition
-2.8.10), the functional (1), (-1)^{p(f)} Res(f Delta_IS(g)), fails the cocycle identity on
-432 of the 11857 weight-0 triples of the window on k^L'(1|4); none of the eight sign variants
-(prefactor (-1)^{p(f)}, (-1)^{p(g)}, sign of the theta d_x term) passes either. The space
-H^2(k^L'(1|4)) is nevertheless 3-dimensional (`h2k14.py`), so a third cocycle exists; it is not
-of this shape in this convention.
+**Note on Table (77), row (1).** The operator Delta_IS = D_1^{-1} D_theta1 D_theta2 D_theta3
+D_theta4 must be simplified before it is evaluated, as the text says (Sect. 2.8): in the product
+D_theta1 ... D_theta4 = sum_j P_j d_x^j the factor D_1^{-1} cancels one d_x, so Delta_IS =
+sum_{j>=1} P_j d_x^{j-1} + P_0 D_1^{-1}. Evaluated naively (apply the D_theta, then divide by d_x)
+it loses the constants killed by d_x, and then (1) fails the cocycle identity on 432 of the
+11857 weight-0 triples of the window (this was the finding of `stl-v1`; the model, not the
+text, was at fault). With the simplified operator (`k14.py`, `DIS`), (1) is a cocycle on
+k^L'(1|4), and (1), (2), (3) are independent modulo coboundaries, i.e., span H^2(k^L'(1|4)),
+as Table (77) states (`h2k14.py`). On k^L(1|4) the functional (1) is undefined on the
+monomial x^{-1}theta_1theta_2theta_3theta_4 and does not extend (Statement 2.8.11).
 
 ## Files
 

@@ -2,7 +2,7 @@
 (realized with x^{1/2} on the monomials odd in theta_4), by the window method: the unknowns are
 the values c(a, b) on pairs of monomials of total weight 0 in the window |power of x| <= M,
 the equations are the cocycle identities for the triples in the window |power| <= N.  Also tested:
-whether the functionals (2), (3) of Table (77) are cocycles, coboundaries, independent mod
+whether the functionals (1) (on k^L'(1|4) only), (2), (3) of Table (77) are cocycles, coboundaries, independent mod
 coboundaries, identically zero.  Run:  python3 h2k14.py 3 7
 """
 from fractions import Fraction as Q
@@ -10,7 +10,7 @@ from itertools import product
 import sys, time
 import os; sys.path[:0] = [os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "lib"), os.path.dirname(os.path.abspath(__file__))]
 from exactlin import rank, nullspace, solve, backend
-from k14 import monos, br, parity, deg, mono, TOP, c2, c3, add
+from k14 import monos, br, parity, deg, mono, TOP, c1, c2, c3, add
 
 def key(f):
     (k, _), = f.items(); return k
@@ -99,4 +99,5 @@ if __name__ == "__main__":
     print("backend", backend())
     for label, mo, dz in (("k^L'(1|4)", False, True), ("k^L(1|4)", False, False), ("k^M(1|4)", True, False)):
         t = time.time()
-        print(label, run(N, M, mo, dz, test=(("(2)", c2), ("(3)", c3))), "%.0fs" % (time.time() - t), flush=True)
+        tests = (("(1)", c1), ("(2)", c2), ("(3)", c3)) if dz else (("(2)", c2), ("(3)", c3))
+        print(label, run(N, M, mo, dz, test=tests), "%.0fs" % (time.time() - t), flush=True)
