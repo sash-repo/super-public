@@ -16,7 +16,7 @@ License: MIT (see `LICENSE`).
 | [`freeslie/`](freeslie/) | D. Leites, O. Lozhechnyk, *Free Lie superalgebras in characteristics 2 and 3, and reflections of roots in characteristic p* (in preparation) | `freeslie-v1` |
 | [`grozall/`](grozall/) | D. Leites, O. Lozhechnyk, *P. Grozman operators on symplectic, periplectic, contact and pericontact (super)manifolds* (in preparation) | `grozall-v1` |
 | [`howe/`](howe/) | D. Leites, O. Lozhechnyk, I. Shchepochkina, *Howe duality on (hyper)Kähler supermanifolds* (in preparation) | `howe-v1` |
-| [`kaehler/`](kaehler/) | D. Leites, *Superization of Kähler and hyper-Kähler manifolds* (in preparation) | `kaehler-v1` |
+| [`kaehler/`](kaehler/) | D. Leites, *Superization of Kähler and hyper-Kähler manifolds* (in preparation) | `kaehler-v2` |
 | [`lezsav/`](lezsav/) | D. Leites, *Superized Leznov-Saveliev equations are the zero-curvature condition on a reduced connection* (in preparation) | `lezsav-v1` |
 | [`max3exc/`](max3exc/) | D. Leites, O. Lozhechnyk, *Maximal subalgebras in the exceptional simple finite-dimensional Lie superalgebras ag(2), ab(3) and osp_a(4\|2)* (in preparation) | `max3exc-v1` |
 | [`maxvec/`](maxvec/) | D. Leites, I. Shchepochkina, *Maximal graded subalgebras of simple vectorial Lie superalgebras with polynomial coefficients* (in preparation) | `maxvec-v1` |
