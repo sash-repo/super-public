@@ -50,6 +50,7 @@ License: MIT (see `LICENSE`).
 | [`sandbrackdist/`](sandbrackdist/) | A. Krutov, D. Leites, O. Lozhechnyk, *Explicit brackets and p-structures of divergence-free and Hamiltonian modular Lie algebras* (in preparation) | `sandbrackdist-v1` |
 | [`gzimaging/`](gzimaging/) | H. Andersén, V. Grozman, D. Leites, O. Lozhechnyk, *P. Grozman's operator and the shape of a growing nodule* (in preparation) | `gzimaging-v1` |
 | [`dzhubrack/`](dzhubrack/) | D. Leites, O. Lozhechnyk, *The superalgebra of antisymmetrizors, the periplectic case, and what the exponents really govern* (in preparation) | `dzhubrack-v1` |
+| [`volich/`](volich/) | D. Leites, *A natural generalization of supersymmetry* (in preparation) | `volich-v1` |
 | [`oddcp1/`](oddcp1/) | D. Leites, O. Lozhechnyk, *Non-split supermanifolds from the complex projective line, and the versal deformations of superstrings* (in preparation) | `oddcp1-v1` |
 | [`dercentextvect/`](dercentextvect/) | P. Grozman, A. Krutov, A. Lebedev, D. Leites, *Derivations and central extensions of simple vectorial Lie (super)algebras* (in preparation) | `dercentextvect-v1` |
 
