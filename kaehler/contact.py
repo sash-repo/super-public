@@ -432,13 +432,13 @@ def gl_stab(d, forms):
         for j in range(d):
             r = []
             for B in forms:
-                # (E_ij^t B + B E_ij)_{ab} = delta_{ia} B_{jb} + B_{ai} delta_{jb}
+                # (E_ij^t B + B E_ij)_{ab} = delta_{ja} B_{ib} + B_{ai} delta_{jb}
                 M = zeros(d, d)
                 for a in range(d):
                     for b in range(d):
                         v = F(0)
-                        if i == a:
-                            v += B[j][b]
+                        if j == a:
+                            v += B[i][b]
                         if j == b:
                             v += B[a][i]
                         M[a][b] = v

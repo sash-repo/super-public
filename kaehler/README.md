@@ -50,22 +50,14 @@ Numbers are those of the text.
 | Lemma 1.10.1 (the halves of d omega = 0: Omega^3 = P^3 + X^+(Omega^1) directly if and only if 2a-b != 2 for even omega; for odd omega, [X^-, X^+] acts on Omega^1 by n-1 on the hat q_i and n+1 on the hat xi_i) | `halves.py` (about 15 min) | `PROPER SUBSPACE of Omega^3` exactly for C^{4\|2} and C^{6\|4}, `= Omega^3, direct sum` for the other even and all odd cases; for odd omega on C^{n\|n}, `diagonal values [n-1, n+1]`. The script normalizes the bivector so that [X^-, X^+] = (n-k) id on Omega^k classically, i.e. it prints minus the scalar 1-a+b/2 of eq. (Hsl); the zero set is the same |
 | Example 1.10.2 (sdim Omega^1 = (2\|4), Omega^3 = (16\|16), P^3 = (14\|12), X^+(Omega^1) = (2\|4) on C^{4\|2}) | `halves_sdim.py` | `C^{4\|2}, omega even ... sdim Omega^1 = (2\|4),  sdim Omega^3 = (16\|16)`, `sdim X^+(Omega^1) = (2\|4),  sdim P^3 = (14\|12)` |
 | Theorem 6.3.1, Lemma 6.3.3, Corollary 6.3.4 (normal shapes of a pair of non-degenerate forms, the law of signs, the number of even and odd parameters); Lemma 6.4.1 (g_1 = 0) | `pairs.py` (about 4 min), `normshape.py` | `pairs.py`: `mismatches: 0`; `normshape.py`: `44 cases confirmed, 0 mismatches`, `adjoint-law violations 0, mu_odd mismatches 0`, `dim g_1 = 0` in every case of Lemma 6.4.1; in its table `2B) n=2, l1+l2 = 0 ... dim g_0 4`, i.e. g_0 = gl(2), the Kähler pair (case 2B of the proof of Lemma 6.4.1 calls it o(4), of dimension 6) |
-| Theorem 6.4.3, table (Hcase1); Lemma 6.5.1a (the contact prolongs, (prolcontactE)); Theorem 6.5.1b, table (Hcase2) | `contact.py` (about 30 min) | Sec. 4: `n=1 ... [torsion 0 + curvature 1]`, `n=2, J=diag(3,5) generic: dim g_0 = 2 ... [torsion 16 + curvature 2]`, `n=2, J=3*1_2 Kaehler: dim g_0 = 4 ... [torsion 8 + curvature 8]`, `n=2, J = one cell: dim g_0 = 1 ... [torsion 20 + curvature 0]`, `n=3 ... generic: dim g_0 = 3 ... [torsion 72 + curvature 3]`, `n=3, J=3*1_3 Kaehler: dim g_0 = 9 ... [torsion 36 + curvature 30]`, every `dim g_1 = 0`; Sec. 5: `dim g_*` = 4, 9, 16, 25 for m = 1, ..., 4 and `g_1 = 0`; with the Euler operator adjoined `dims [1, 2(n-1), (n-1)^2+1, 2(n-1), 1]`, `total ... = dim sl(n+1)`; `dim H^2(g_-; g_*)` = 3 (weight 2: 3), 19 (weight 1: 4, 2: 15), 64 (weight 1: 16, 2: 48) for n = 2, 3, 4. **See the note below on the Kähler and one-cell rows.** |
+| Theorem 6.4.3, table (Hcase1); Lemma 6.5.1a (the contact prolongs, (prolcontactE)); Theorem 6.5.1b, table (Hcase2) | `contact.py` (about 30 min) | Sec. 4: `n=1 ... [torsion 0 + curvature 1]`, `n=2, J=diag(3,5) generic: dim g_0 = 2 ... [torsion 16 + curvature 2]`, `n=2, J=3*1_2 Kaehler: dim g_0 = 4 ... [torsion 8 + curvature 9]`, `n=2, J = one cell: dim g_0 = 2 ... [torsion 16 + curvature 2]`, `n=3 ... generic: dim g_0 = 3 ... [torsion 72 + curvature 3]`, `n=3, J=3*1_3 Kaehler: dim g_0 = 9 ... [torsion 36 + curvature 36]`, every `dim g_1 = 0`; Sec. 5: `dim g_*` = 4, 9, 16, 25 for m = 1, ..., 4 and `g_1 = 0`; with the Euler operator adjoined `dims [1, 2(n-1), (n-1)^2+1, 2(n-1), 1]`, `total ... = dim sl(n+1)`; `dim H^2(g_-; g_*)` = 3 (weight 2: 3), 19 (weight 1: 4, 2: 15), 64 (weight 1: 16, 2: 48) for n = 2, 3, 4. |
 
-## Known defect (to be corrected together with the text)
+## Version 2
 
-`contact.py`, function `gl_stab`, solves X B + B X = 0 instead of X^T B + B X = 0 for the
-stabilizer g_0 of the pair (B_1, B_2). For diagonal J the two give spaces of the same dimension
-and the same H^2 (the rows n = 1 and generic J are right), but not otherwise. Solved with the
-correct equation, which is the one of the proof of Lemma 6.4.1 (conditions (X)):
-
-- n = 2, J one Jordan cell: dim g_0 = 2 (not 1), torsion 16, curvature 2 (not 20 and 0);
-- n = 2, Kähler pair: torsion 8, curvature 9 (not 8);
-- n = 3, Kähler pair: torsion 36, curvature 36 (not 30).
-
-The curvature of the Kähler pair is (n(n+1)/2)^2, the dimension of the space of Kähler curvature
-tensors, as it should be. So table (Hcase1) of Theorem 6.4.3 and the remark after it (a single
-Jordan cell has dim g_0 = 1 and no curvature) inherit the defect.
+`contact.py`, function `gl_stab`, now solves X^T B + B X = 0 for the stabilizer g_0 of the pair
+(B_1, B_2), the conditions (X) of Lemma 6.4.1; version 1 solved X B + B X = 0. The rows of table
+(Hcase1) for n = 2 with J one Jordan cell and for the Kähler pairs n = 2, 3 change accordingly;
+the other rows, and every other output of the folder, are unchanged.
 
 ## Files
 
