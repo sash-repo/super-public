@@ -25,6 +25,7 @@ License: MIT (see `LICENSE`).
 | [`shclumn/`](shclumn/) | D. Leites, I. Shchepochkina, *The classification of simple complex Lie superalgebras of polynomial vector fields and their deformations* (survey, in preparation) | `shclumn-v1` |
 | [`svodd/`](svodd/) | D. Leites, O. Lozhechnyk, *Simple singularities of functions on supermanifolds with odd parameters* (in preparation) | `svodd-v1` |
 | [`domvera/`](domvera/) | D. Leites, *Dominant weights, systems of simple roots, and reflections* (in preparation) | `domvera-v1` |
+| [`index/`](index/) | D. Leites, *The Index Theorem for Homogeneous Differential Operators on Supermanifolds, and Chern Classes* (in preparation) | `index-v1` |
 | [`arc/`](arc/) | D. Leites, I. Shchepochkina, *Superized Schwarzians and linear fractional transformations of distinguished superstrings* (in preparation) | `arc-v1` |
 | [`stringdef/`](stringdef/) | D. Leites, O. Lozhechnyk, *Deformations of the distinguished stringy Lie superalgebras: what the coefficients decide* (in preparation) | `stringdef-v1` |
 | [`sposci/`](sposci/) | D. Leites, I. Shchepochkina, *Spinor-oscillator representations of stringy Lie superalgebras* (in preparation) | `sposci-v1` |
