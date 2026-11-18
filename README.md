@@ -53,5 +53,6 @@ License: MIT (see `LICENSE`).
 | [`volich/`](volich/) | D. Leites, *A natural generalization of supersymmetry* (in preparation) | `volich-v1` |
 | [`oddcp1/`](oddcp1/) | D. Leites, O. Lozhechnyk, *Non-split supermanifolds from the complex projective line, and the versal deformations of superstrings* (in preparation) | `oddcp1-v1` |
 | [`dercentextvect/`](dercentextvect/) | P. Grozman, A. Krutov, A. Lebedev, D. Leites, *Derivations and central extensions of simple vectorial Lie (super)algebras* (in preparation) | `dercentextvect-v1` |
+| [`vogel/`](vogel/) | D. Leites, O. Lozhechnyk, *Vogel's approach to modular Lie (super)algebras* (in preparation) | `vogel-v1` |
 
 Cite a folder by its link, e.g. `https://github.com/sash-repo/super-public/tree/main/borcmod`.
