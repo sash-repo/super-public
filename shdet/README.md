@@ -42,6 +42,7 @@ Numbers are those of the text.
 | Statements 10.2.1, 10.2.3, 10.2.4 (po(0\|2n): the Casimir, the two determinants, roots not quasiroots) | `run_poi.py`, `run_cas.py`, `run_shap.py` | `run_cas.py`: `7/7 checks pass`; `run_shap.py`: `14/14 checks pass` |
 | Subsec. 11.4, Proposition 11.4.1 (osp(1\|2): the anti-involution and the Casimir eigenvalues) | `osp12.py` | the pairs `(0, x^k) (0, -lambda x^k - x^k)` |
 | Subsec. 11.6, Proposition 11.6.1, Statement 11.6.4 (K_lambda: the determinant on M_{-1}, the next components) | `osh/test1.py`, `osh/deg1.py` (about 3.5 minutes), `osh/deg2.py 7 3 2 5`, `osh/deg3.py 7 3 2 5 3 4 5`, `osh/derived.py` | `checks 41 ok`; `= prod(59)*Vandermonde^2: True`; `deg -3 N=3 size=22 rank=11`, `deg -3 N=5 size=65 rank=11`; `h in span: True` for each lambda |
+| The Ramond sector (Subsecs. C) of the stringy superalgebras and the odd Casimir of k^M(1\|7)): k^M(1\|n) has volume forms twisted by t^{1/2}; k^M(1\|5) coincides with its derived algebra; the odd form (bf) on k^M(1\|7) is not invariant, not even under the even part | `kMperfect.py` (with `volM.py`), control `kLcodim.py`; `kM7form.py`, `kM7formev.py` (each a few minutes) | `k^M(1\|n): ... -> [{lam: 2-n, mu: 1/2}]` for n = 1, 2, 3, 4, 7; `k^M(1\|5): weight-0 space dim 16, brackets span 16` (control: `k^L(1\|4): ... dim 8, brackets span 7`); `invariance fails for` a nonzero number of triples for s = 0, -1, 1, and for f even and f odd |
 
 ## Files
 
