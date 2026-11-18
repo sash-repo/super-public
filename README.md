@@ -8,6 +8,7 @@ License: MIT (see `LICENSE`).
 | Folder | Paper | Tag |
 |---|---|---|
 | [`borcmod/`](borcmod/) | S. Bouarroudj, D. Leites, O. Lozhechnyk, *Unary and binary osp(n\|2)-invariant differential operators on the 1\|n-dimensional contact supermanifold in characteristic >2* (in preparation) | `borcmod-v1` |
+| [`bole11/`](bole11/) | V. Bovdi, D. Leites, *Gordan-Rankin-Cohen operators on the spaces of weighted densities in superdimension 1\|1* (in preparation) | `bole11-v1` |
 | [`grcsof/`](grcsof/) | S. Bouarroudj, D. Leites, O. Lozhechnyk, I. Shchepochkina, *Gordan-Rankin-Cohen brackets on 1\|n-dimensional superstrings with a contact structure for n<=6* (in preparation) | `grcsof-v1` |
 | [`borvinrel/`](borvinrel/) | P. Grozman, A. Krutov, A. Lebedev, D. Leites, O. Lozhechnyk, *Vinberg's theorem, Borcherds superalgebras, and presentations* (in preparation) | `borvinrel-v1` |
 | [`cssei/`](cssei/) | D. Leites, O. Lozhechnyk, *New simple modular Lie (super)algebras* (in preparation) | `cssei-v1` |
