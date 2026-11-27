@@ -56,5 +56,7 @@ License: MIT (see `LICENSE`).
 | [`dercentextvect/`](dercentextvect/) | P. Grozman, A. Krutov, A. Lebedev, D. Leites, *Derivations and central extensions of simple vectorial Lie (super)algebras* (in preparation) | `dercentextvect-v1` |
 | [`vogel/`](vogel/) | D. Leites, O. Lozhechnyk, *Vogel's approach to modular Lie (super)algebras* (in preparation) | `vogel-v1` |
 | [`yb/`](yb/) | D. Leites, *On the Yang--Baxter equation and Lie superalgebras* (accepted by Theoretical and Mathematical Physics) | `yb-v1` |
+| [`iljabook/`](iljabook/) | I. R. Miklaszewski, *The algebraic language of differential equations*, edited by D. Leites (in preparation) | `iljabook-v1` |
+| [`iljadl/`](iljadl/) | D. Leites, I. R. Miklaszewski, *Supersymmetries of differential equations; semiholonomic jets* (in preparation) | `iljadl-v1` |
 
 Cite a folder by its link, e.g. `https://github.com/sash-repo/super-public/tree/main/borcmod`.
